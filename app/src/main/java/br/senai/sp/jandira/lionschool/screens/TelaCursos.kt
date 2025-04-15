@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -45,7 +46,7 @@ fun TelaCursos() {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 16.dp)
+                .padding(horizontal = 16.dp, vertical = 16.dp)
         ) {
             Row(
                 verticalAlignment = Alignment.CenterVertically,
@@ -62,10 +63,11 @@ fun TelaCursos() {
                 )
                 Spacer(
                     modifier = Modifier
-                        .width(8.dp))
+                        .width(8.dp)
+                )
                 Column(
                     horizontalAlignment = Alignment.Start
-                ){
+                ) {
                     Text(
                         text = stringResource(R.string.lion_nome),
                         fontSize = 20.sp,
@@ -76,6 +78,14 @@ fun TelaCursos() {
                 }
 
             }
+            HorizontalDivider(
+                modifier = Modifier
+                    .padding(
+                        top = 10.dp,
+                        start = 20.dp,
+                        end = 20.dp
+                    )
+            )
         }
 
 
@@ -83,10 +93,8 @@ fun TelaCursos() {
 }
 
 
-
-
-    @Preview(showSystemUi = true)
-        @Composable
-        private fun TelaCursosPreview() {
-            TelaCursos()
-        }
+@Preview(showSystemUi = true)
+@Composable
+private fun TelaCursosPreview() {
+    TelaCursos()
+}
