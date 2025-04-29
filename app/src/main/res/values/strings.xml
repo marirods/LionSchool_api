@@ -18,4 +18,39 @@
     <string name="ele3">Learn to design communication networks.</string>
     <string name="semestre">3 semesters</string>
     <string name="find_student">Find a student</string>
+    <string name="todos_curso">Todos</string>
+    <string name="cursando">Cursando</string>
+    <string name="finalizado">Finalizado</string>
+    <string name="list_student">Students List</string>
+    <string name="pesquisar">""</string>
+
+
+    <string name="perfil_name1">Luana Oliveira Dias</string>
+    <string name="id1">20151001018</string>
+    <string name="data1">2022</string>
+
+    <string name="perfil_name2">Pedro da Silva Borges</string>
+    <string name="id2">20151001018</string>
+    <string name="data2">2022</string>
+
+    <string name="perfil_name3">Ana Clara Gomes</string>
+    <string name="id3">20151001018</string>
+    <string name="data3">2025</string>
+
+    <string name="perfil_name4">Fabiana Luz Moraes</string>
+    <string name="id4">20151001018</string>
+    <string name="data4">2022</string>
+
+    <string name="perfil_name5">Carlos Augusto Nobre</string>
+    <string name="id5">20151001018</string>
+    <string name="data5">2025</string>
+
+    <string name="perfil_name6">Pedro Xavier</string>
+    <string name="id6">20151001018</string>
+    <string name="data6">2025</string>
+
+    <string name="perfil_name7">Pedro Xavier</string>
+    <string name="id7">20151001018</string>
+    <string name="data7">2025</string>
+
 </resources>
