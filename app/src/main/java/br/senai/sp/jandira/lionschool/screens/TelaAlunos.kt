@@ -40,6 +40,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.senai.sp.jandira.lionschool.R
+import br.senai.sp.jandira.lionschool.components.Alunos
 import java.util.Locale
 
 @Composable
@@ -47,11 +48,22 @@ fun TelaAlunos(modifier: Modifier = Modifier) {
     Box(
         modifier = Modifier
             .fillMaxSize()
+            .background(
+                brush = Brush.linearGradient(
+                    listOf(
+                        Color(color = 0xFFFFFFFF),
+                        Color(color = 0xFFFFFFFF)
 
-    ) {
+                    )
+                )
+            ),
+
+        ) {
         Column(
             modifier = Modifier
-                .padding(20.dp)
+                .fillMaxWidth()
+                .fillMaxSize()
+                .padding(horizontal = 16.dp, vertical = 16.dp)
         ) {
             Column(
             ) {
@@ -63,6 +75,7 @@ fun TelaAlunos(modifier: Modifier = Modifier) {
                 ) {
                     Row(
                         modifier = Modifier
+                            .padding(top = 26.dp)
                             .background(Color.White),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
@@ -79,45 +92,50 @@ fun TelaAlunos(modifier: Modifier = Modifier) {
                         )
 
                     }
-                    Card(
-                        modifier = Modifier,
-                        colors = CardDefaults.cardColors(containerColor = Color(0xFFFFC23D)),
-                        shape = CircleShape
-                    ) {
-                        Text(
-                            modifier = Modifier
-                                .padding(10.dp),
-                            text = stringResource(R.string.ds1),
-                            fontSize = 25.sp,
-                            fontWeight = FontWeight.Bold
-                        )
+                    Column {
+                        Card(
+                            modifier = Modifier,
+                            colors = CardDefaults.cardColors(containerColor = Color(0xFFFFC23D)),
+                            shape = CircleShape
+                        ) {
+                            Text(
+                                modifier = Modifier
+                                    .padding(10.dp),
+                                text = stringResource(R.string.ds1),
+                                fontSize = 25.sp,
+                                fontWeight = FontWeight.Bold
+                            )
+                        }
                     }
                 }
+
                 Divider(
                     color = Color(0xFFFFC23D)
                 )
                 Column(
                     modifier = Modifier
-                        .fillMaxWidth()
                         .padding(top = 5.dp),
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     OutlinedTextField(
-                        modifier = Modifier
-                            .fillMaxWidth(),
                         value = "",
-                        onValueChange = {
-                        },
-                        label = { Text(text = stringResource(R.string.pesquisar)) },
-                        leadingIcon = {
+                        onValueChange = {},
+                        label = {
+                            Text(text = stringResource(R.string.find_student)) },
+                        trailingIcon = {
                             Icon(
                                 imageVector = Icons.Default.Search,
                                 contentDescription = "",
                                 tint = (Color(color = 0xFF9E9FA4))
                             )
-                        }
+                        },
+                        modifier = Modifier
+                            .padding(10.dp)
+                            .fillMaxWidth(),
+                        shape = RoundedCornerShape(10.dp)
                     )
                     Row(
+                        verticalAlignment = Alignment.CenterVertically,
                         modifier = Modifier
                             .fillMaxWidth()
                     ) {
@@ -158,71 +176,24 @@ fun TelaAlunos(modifier: Modifier = Modifier) {
                         modifier = Modifier
                             .fillMaxWidth(),
                         verticalAlignment = Alignment.CenterVertically
+
                     ) {
                         Image(
-                            painter = painterResource(id = R.drawable.lion_list),
+                            painter = painterResource(id = R.drawable.lion_graduation),
                             contentDescription = "",
                             modifier = Modifier
                                 .size(
-                                    (100.dp)
+                                    (50.dp)
                                 )
                         )
                         Text(
                             text = stringResource(R.string.list_student),
                             color = Color(0xFF3347B0),
                             fontWeight = FontWeight.Bold,
-                            fontSize = 35.sp
+                            fontSize = 22.sp
                         )
+
                     }
-                    Alunos(
-                        image = painterResource(R.drawable.perfil_img1),
-                        name = stringResource(R.string.perfil_name1),
-                        statusColor = colorResource(R.color.cursando),
-                        data = stringResource(R.string.data1),
-                        id = stringResource(R.string.id1)
-                    )
-                    Alunos(
-                        image = painterResource(R.drawable.perfil_img2),
-                        name = stringResource(R.string.perfil_name2),
-                        statusColor = colorResource(R.color.cursando),
-                        data = stringResource(R.string.data2),
-                        id = stringResource(R.string.id2)
-                    )
-                    Alunos(
-                        image = painterResource(R.drawable.perfil_img3),
-                        name = stringResource(R.string.perfil_name3),
-                        statusColor = colorResource(R.color.finalizado),
-                        data = stringResource(R.string.data3),
-                        id = stringResource(R.string.id3)
-                    )
-                    Alunos(
-                        image = painterResource(R.drawable.perfil_img4),
-                        name = stringResource(R.string.perfil_name4),
-                        statusColor = colorResource(R.color.finalizado),
-                        data = stringResource(R.string.data4),
-                        id = stringResource(R.string.id4)
-                    )
-                    Alunos(
-                        image = painterResource(R.drawable.perfil_img5),
-                        name = stringResource(R.string.perfil_name5),
-                        statusColor = colorResource(R.color.finalizado),
-                        data = stringResource(R.string.data5),
-                        id = stringResource(R.string.id5)
-                    )
-                    Alunos(
-                        image = painterResource(R.drawable.perfil_img67),
-                        name = stringResource(R.string.perfil_name6),
-                        statusColor = colorResource(R.color.finalizado),
-                        data = stringResource(R.string.data6),
-                        id = stringResource(R.string.id6)
-                    )
-                    Alunos(
-                        image = painterResource(R.drawable.perfil_img67),
-                        name = stringResource(R.string.perfil_name7),
-                        statusColor = colorResource(R.color.finalizado),
-                        data = stringResource(R.string.data7),
-                        id = stringResource(R.string.id7)
-                    )
                 }
             }
         }
