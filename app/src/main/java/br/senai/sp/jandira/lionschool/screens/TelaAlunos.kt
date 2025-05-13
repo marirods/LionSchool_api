@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -194,21 +195,10 @@ fun TelaAlunos(modifier: Modifier = Modifier) {
                             fontSize = 22.sp
                         )
                     }
-                    Box(
+                    Column (
                         modifier = Modifier
-                            .height(175.dp)
-                            .padding(10.dp)
-                    ){
-                        Box(
-                            modifier = Modifier
-                                .width(100.dp)
-                                .height(100.dp)
-                                .background(
-                                    Color(0xFFFFC23D),
-                                    RoundedCornerShape(topStart = 15.dp, bottomStart = 15.dp)
-                                )
-                        )
-                    }
+                            .fillMaxHeight()
+                    ){  }
                 }
             }
         }
